@@ -11,34 +11,45 @@ import java.util.Scanner;
      public static void main(String[] args) {
          System.out.println("enter 2 number");
          Scanner sc= new Scanner(System.in);
-         int a= sc.nextInt();
-         int b= sc.nextInt();
+         double a= sc.nextInt();
+         double b= sc.nextInt();
 
 
 
-
-         System.out.println(" enter 1 to add\n" +
+	while(true) {
+         System.out.println("enter 1 to add\n" +
                  "enter 2 to subtract\n" +
                  "enter 3 to multiply\n" +
                  "enter 4 to divide\n" +
-                 "enter 5 to find reminder\n");
+                 "enter 5 to find reminder\n"+
+                 "enter 6 to exit\n");
 
          int choice= sc.nextInt();
+         int c=0;
 
          switch(choice){
-             case 1: System.out.println(a+b);
-                 break;
-             case 2: System.out.println(a-b);
+             case 1: System.out.println(a+b);break;
+                 
+             case 2: System.out.println(a-b);break;
+               
+             case 3: System.out.println(a*b);break;
+                
+             case 4: System.out.println(a/b);break;
+                
+             case 5: 
+              if (a>b)
+       		      System.out.println(a%b);
+             else 
+             System.out.println("Frist number should be larger then second number.");
+                          
                 break;
-             case 3: System.out.println(a*b);
-                break;
-             case 4: System.out.println(a/b);
-                break;
-             case 5: System.out.println(a%b);
-             break;
-         }
-
+             case 6:c=1;break;
+             
+             }
+        if(c==1)
+        	break;
+        	} 
      }
 
-
+	
 }
